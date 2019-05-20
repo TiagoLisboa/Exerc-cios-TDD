@@ -51,7 +51,7 @@ public class FizzbuzzTest {
 
         Map<Integer, String> mapaTestes = new HashMap<>();
         for (; i <= 15; i++) {
-            mapaTestes.put(i, ((i % 3 == 0 && i % 5 == 0) ? "fuzzbuzz" : ((i % 3 == 0) ? "fizz" : ((i % 5 == 0) ? "buzz" : "" + i))));
+            mapaTestes.put(i, ((i % 3 == 0 && i % 5 == 0) ? "fizzbuzz" : ((i % 3 == 0) ? "fizz" : ((i % 5 == 0) ? "buzz" : "" + i))));
         }
         
         for (Map.Entry<Integer, String> entry : mapaTestes.entrySet()) {
