@@ -17,7 +17,7 @@ public class Fizzbuzz {
      * @param i the number to be checked
      */
     public String Answer(int i) {
-        if (i == 3) return "fizz";
+        if (i % 3 == 0) return "fizz";
         if (i == 5) return "buzz";
         return "" + i;
     }
