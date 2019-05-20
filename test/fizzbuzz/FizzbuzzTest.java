@@ -50,7 +50,7 @@ public class FizzbuzzTest {
         String expResult = "1";
 
         Map<Integer, String> mapaTestes = new HashMap<>();
-        for (; i <= 10; i++) {
+        for (; i <= 15; i++) {
             mapaTestes.put(i, ((i % 3 == 0 && i % 5 == 0) ? "fuzzbuzz" : ((i % 3 == 0) ? "fizz" : ((i % 5 == 0) ? "buzz" : "" + i))));
         }
         
