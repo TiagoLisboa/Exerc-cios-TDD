@@ -5,6 +5,8 @@
  */
 package fizzbuzz;
 
+import java.util.HashMap;
+import java.util.Map;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -44,11 +46,19 @@ public class FizzbuzzTest {
     public void testAnswer() {
         System.out.println("Answer");
         Fizzbuzz instance = new Fizzbuzz();
-        
         int i = 1;
         String expResult = "1";
-        String result = instance.Answer(i);
-        assertEquals(expResult, result);
+
+        Map<Integer, String> mapaTestes = new HashMap<>();
+        for (; i <= 3; i++) {
+            mapaTestes.put(i, ((i % 3 == 0 && i % 5 == 0) ? "fuzzbuzz" : ((i % 3 == 0) ? "fizz" : ((i % 5 == 0) ? "buzz" : "" + i))));
+        }
+        
+        for (Map.Entry<Integer, String> entry : mapaTestes.entrySet()) {
+            String result = instance.Answer(entry.getKey());
+            expResult = entry.getValue();
+            assertEquals(expResult, result);
+        }
         
         
         // TODO review the generated test code and remove the default call to fail.
