@@ -43,11 +43,14 @@ public class FizzbuzzTest {
     @Test
     public void testAnswer() {
         System.out.println("Answer");
-        int i = 1;
         Fizzbuzz instance = new Fizzbuzz();
+        
+        int i = 1;
         String expResult = "1";
         String result = instance.Answer(i);
         assertEquals(expResult, result);
+        
+        
         // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
     }
